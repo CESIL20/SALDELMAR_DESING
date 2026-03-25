@@ -88,7 +88,7 @@ nav.scrolled {
 /* --- HERO SECTION --- */
 #inicio {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('img/experiencia.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('experiencia.png');
     background-size: cover;
     background-position: center;
     display: flex;
