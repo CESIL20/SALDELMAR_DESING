@@ -42,15 +42,60 @@
         <div class="hero-content">
             
             <p>Donde la tradición del mar se encuentra con la alta cocina.</p>
-            <a href="#contacto" class="btn-reserva">Reservar Mesa</a>
+            <a href="#" class="btn-reserva" onclick="abrirModal()">Reservar Mesa</a>
         </div>
     </header>
+   <div id="modalReserva" class="modal">
+  <div class="modal-content">
+    
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
 
+    <h2>Reservar Mesa</h2>
+
+    <form id="formReserva">
+
+      <div class="input-group">
+        <span>👤</span>
+        <input type="text" name="nombre" placeholder="Nombre" required>
+      </div>
+
+      <div class="input-group">
+        <span>📞</span>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+      </div>
+
+      <div class="input-group">
+        <span>📅</span>
+        <input type="date" name="fecha" required>
+      </div>
+
+      <div class="input-group">
+        <span>⏰</span>
+        <input type="time" name="hora" required>
+      </div>
+
+      <div class="input-group">
+        <span>🍽️</span>
+        <input type="number" name="pax" placeholder="Personas" min="1" required>
+      </div>
+
+      <div class="terminos">
+        <input type="checkbox" id="terminos" required>
+        <label for="terminos">Acepto los términos y condiciones</label>
+      </div>
+
+      <button type="submit">Confirmar Reserva</button>
+
+      <p id="mensaje" class="mensaje"></p>
+
+    </form>
+  </div>
+</div>
     <!-- NOSOTROS -->
     <section id="nosotros">
         
         <div class="nosotros-img">
-            <img src="salon.jpeg" alt="salon">
+            <img src="salon.jpeg" alt="exibicion">
         </div>
         <div class="nosotros-text">
             
@@ -184,7 +229,7 @@
         <div class="info-grid">
             <div class="info-box">
                 <h4>Dirección</h4>
-                <p>Av. 28 de Julio 1290, Miraflores 15047</p>
+                <p>Av. 28 de Julio 1290, Miraflores, Lima</p>
             </div>
             <div class="info-box">
                 <h4>Horario</h4>
