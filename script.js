@@ -25,3 +25,36 @@ if (toggleBtn) {
         });
     });
 }
+
+function abrirModal() {
+    const modal = document.getElementById("modalReserva");
+    modal.classList.add("show");
+}
+
+function cerrarModal() {
+    const modal = document.getElementById("modalReserva");
+    modal.classList.remove("show");
+}
+
+document.getElementById("formReserva").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const mensaje = document.getElementById("mensaje");
+
+    mensaje.style.color = "#c59d5f";
+    mensaje.textContent = "Enviando reserva...";
+
+    setTimeout(() => {
+        mensaje.style.color = "#4CAF50";
+        mensaje.textContent = "✅ Reserva confirmada";
+
+        this.reset();
+
+        setTimeout(() => {
+            cerrarModal();
+            mensaje.textContent = "";
+        }, 1500);
+
+    }, 1000);
+});
+

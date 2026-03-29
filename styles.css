@@ -1,4 +1,4 @@
-/* --- VARIABLES DE COLORES --- */
+ /* --- VARIABLES DE COLORES --- */
 :root {
     --bg-color: #0F1115;
     --text-main: #EAEAEA;
@@ -201,7 +201,188 @@ nav.scrolled {
     color: var(--bg-color);
     box-shadow: 0 0 20px rgba(198, 168, 124, 0.3);
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 
+    /* Fondo negro semi transparente */
+    background: rgba(0, 0, 0, 0.75);
+
+    /* efecto moderno */
+    backdrop-filter: blur(6px);
+}
+
+.modal-content {
+    background: rgba(15, 15, 15, 0.95); /* negro elegante */
+    color: #fff;
+    margin: 5% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+}
+
+.modal-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #c59d5f; /* dorado */
+}
+
+/* Inputs oscuros */
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #111;
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+/* Botón elegante */
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    background: #d3963a;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background: #e6b76a;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+
+    /* animación */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background: rgba(15, 15, 15, 0.97);
+    color: #fff;
+    margin: 5% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 14px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
+
+    /* animación */
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #c59d5f;
+    margin-bottom: 15px;
+}
+
+/* INPUTS CON ICONO */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #111;
+    border: 1.5px solid #333;
+    border-radius: 8px;
+    margin: 8px 0;
+    padding: 0;
+}
+
+.input-group span {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.input-group input {
+    border: none;
+    background: transparent;
+    color: #fff;
+    width: 100%;
+    outline: none;
+}
+
+/* BOTÓN PRO */
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #c59d5f, #e6b76a);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    transform: scale(1.05);
+}
+
+/* MENSAJE BONITO */
+.mensaje {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* CERRAR */
+.cerrar {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.cerrar:hover {
+    color: #fff;
+}
+
+.terminos {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.terminos input[type="checkbox"] {
+    width: auto !important; /* 🔥 rompe el conflicto */
+    margin: 0;
+    accent-color: #c59d5f;
+}
+
+.terminos label {
+    margin: 0;
+}
 /* --- SECCIONES GENERALES --- */
 section {
     padding: 6rem 10%;
