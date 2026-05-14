@@ -71,3 +71,19 @@ document.getElementById("formReserva").addEventListener("submit", function(e) {
 
     }, 1500);
 });
+// RETRASO EN WHATSAPP PARA VER EL GLOBO EN MÓVILES
+const whatsappBtn = document.querySelector('.whatsapp-float');
+
+if (whatsappBtn) {
+    whatsappBtn.addEventListener('click', function(e) {
+        // Solo aplicamos retraso en móviles (pantallas pequeñas)
+        if (window.innerWidth <= 768) {
+            e.preventDefault(); // Detenemos la apertura inmediata
+            
+            // Esperamos 1.5 segundos (1500ms) para que lean el mensaje
+            setTimeout(() => {
+                window.open(this.href, '_blank'); // Abrimos WhatsApp manualmente
+            }, 800); // 800 milisegundos de espera
+        }
+    });
+}
